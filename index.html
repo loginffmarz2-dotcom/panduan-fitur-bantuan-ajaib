@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panduan lengkap menggunakan fitur bantuan di aplikasi Ajaib. Akses live chat, FAQ, dan hubungi CS dengan mudah.">
+  <meta name="keywords" content="fitur bantuan ajaib, live chat ajaib, cara mengakses bantuan ajaib, cs ajaib di aplikasi">
+  <title>Panduan Menggunakan Fitur Bantuan di Aplikasi Ajaib</title>
+  <style>
+    :root {
+      --header-height: 70px;
+      --z-fixed: 100;
+      --primary-color: #1a56db;
+      --secondary-color: #111827;
+      --background-color: #f0f4ff;
+      --card-background: #fff;
+      --text-color: #000;
+      --light-blue: #dbeafe;
+      --spacing-sm: 20px;
+      --spacing-md: 40px;
+      --spacing-lg: 60px;
+      --border-radius: 8px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-top: var(--header-height);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-sm);
+    }
+
+    section {
+      margin-top: var(--spacing-lg);
+      position: relative;
+    }
+
+    h1, h2, h3, h4, .section-title {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #111;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      background: none;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--primary-color);
+    }
+
+    .section-title::after {
+      display: none;
+    }
+
+    .section-description {
+      text-align: center;
+      color: #4b5563;
+      margin-bottom: var(--spacing-md);
+      font-size: 1rem;
+    }
+
+    header {
+      text-align: center;
+      padding: var(--spacing-md) 0;
+    }
+
+    .hero-logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .hero-section {
+      padding: var(--spacing-lg) 0;
+      background-color: var(--background-color);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      background-color: var(--card-background);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: var(--z-fixed);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 var(--spacing-sm);
+    }
+
+    .nav__logo {
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .nav__button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px 16px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .nav__button:hover {
+      background-color: #1544ad;
+    }
+
+    .contact-section,
+    .benefits-section,
+    .faq-section {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      padding: var(--spacing-lg) 0;
+    }
+
+    .contact-section,
+    .faq-section {
+      background-color: #fff;
+    }
+
+    .benefits-section {
+      background-color: transparent;
+      padding: var(--spacing-lg) 0;
+    }
+
+    .benefits-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-md);
+      background-color: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      background: var(--card-background);
+      padding: var(--spacing-sm);
+      border-radius: var(--border-radius);
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-number {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    .benefit-card {
+      width: 300px;
+      text-align: center;
+      padding: var(--spacing-md);
+      transition: transform 0.3s ease;
+      background: var(--card-background);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefit-card:hover {
+      transform: scale(1.05);
+    }
+
+    .step-list {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .step-item {
+      background: var(--card-background);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--primary-color);
+    }
+    .step-number {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: var(--spacing-sm);
+      border: 1px solid #e5e7eb;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background: var(--card-background);
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer.active {
+      padding: 15px;
+      max-height: 500px;
+    }
+
+    .cta-section {
+      background: var(--light-blue);
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin: var(--spacing-md) 0;
+    }
+
+    .cta-contact-info {
+      margin-top: var(--spacing-md);
+      padding: var(--spacing-sm);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      justify-content: center;
+      margin-top: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    .contact-button {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-3px);
+      animation: none;
+    }
+
+    .phone-button {
+      background: linear-gradient(135deg, #1a56db, #1544ad);
+    }
+
+    .whatsapp-button {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .button-icon {
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .footer {
+      background-color: #131c2b;
+      color: #d1d5db;
+      padding: 40px 20px;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      margin-top: var(--spacing-lg);
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #f9fafb;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid #374151;
+      margin: 30px 0;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .contact-cards, .benefits {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-card, .benefit-card {
+        width: 100%;
+        max-width: 300px;
+      }
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav" id="main-navigation">
+    <a href="#beranda" class="nav__logo">Ajaib Sekuritas</a>
+    <a href="#contact-section" class="nav__button">Hubungi CS</a>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <header id="beranda" class="hero-section">
+      <img src="https://i.ibb.co.com/hRLRWqfd/logo-ajaib.png" alt="Logo Ajaib Sekuritas" class="hero-logo">
+      <h1>Panduan Menggunakan Fitur Bantuan di Aplikasi Ajaib</h1>
+      <p>Aplikasi Ajaib menyediakan fitur bantuan yang dapat membantu Anda menyelesaikan masalah secara mandiri. Ikuti panduan berikut untuk mengakses live chat, FAQ, dan menghubungi Customer Service dengan mudah.</p>
+    </header>
+
+    <!-- Panduan Langkah-langkah -->
+    <section class="benefits-section">
+      <h2><span class="section-title">Langkah-langkah Mengakses Fitur Bantuan</span></h2>
+      <div class="benefits-container">
+        <div class="step-list">
+          <div class="step-item">
+            <div class="step-number">📱 Langkah 1: Buka Aplikasi Ajaib</div>
+            <p>Pastikan Anda sudah login ke akun Ajaib. Di halaman utama (beranda), perhatikan ikon <strong>profil</strong> atau <strong>pengaturan</strong> (biasanya di pojok kanan bawah atau kiri atas).</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">🔍 Langkah 2: Cari Menu "Bantuan" atau "Help Center"</div>
+            <p>Setelah masuk ke halaman profil, gulir ke bawah hingga menemukan menu <strong>Bantuan</strong>, <strong>Pusat Bantuan</strong>, atau <strong>Customer Service</strong>. Klik menu tersebut.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">💬 Langkah 3: Pilih Metode Bantuan</div>
+            <p>Anda akan melihat beberapa opsi: <strong>FAQ (Pertanyaan Umum)</strong>, <strong>Live Chat</strong>, <strong>Email Support</strong>, atau <strong>Nomor Telepon CS</strong>. Pilih sesuai kebutuhan.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number">📞 Langkah 4: Hubungi CS (Jika Perlu)</div>
+            <p>Jika pertanyaan tidak terjawab di FAQ, gunakan fitur <strong>Live Chat</strong> untuk terhubung langsung dengan agen. Anda juga dapat menghubungi Call Center di <strong>0851-2222-2210</strong> (24 jam).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manfaat Fitur Bantuan -->
+    <section class="benefits-section">
+      <h2><span class="section-title">Keunggulan Fitur Bantuan di Aplikasi Ajaib</span></h2>
+      <div class="benefits-container">
+        <div class="benefits">
+          <div class="benefit-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <h4>Akses Langsung 24/7</h4>
+            <p>Fitur bantuan tersedia kapan saja tanpa perlu keluar dari aplikasi.</p>
+          </div>
+          <div class="benefit-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <h4>Live Chat Cepat</h4>
+            <p>Terhubung dengan agen CS dalam hitungan menit.</p>
+          </div>
+          <div class="benefit-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <h4>FAQ Lengkap</h4>
+            <p>Temukan jawaban dari pertanyaan umum seputar investasi, deposit, dan akun.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak Darurat -->
+    <section id="contact-section" class="contact-section">
+      <h2><span class="section-title">Butuh Bantuan Lebih Lanjut?</span></h2>
+      <p class="section-description">Jika fitur bantuan di aplikasi belum menyelesaikan masalah Anda, hubungi Customer Service Ajaib melalui saluran berikut</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <h3>Call Center 24 Jam</h3>
+          <p>Bicara langsung dengan CS Ajaib.</p>
+          <a href="tel:0851-2222-2210" target="_blank" rel="noopener noreferrer" style="text-decoration:none;"><p class="contact-number">0851-2222-2210</p></a>
+        </div>
+        <div class="contact-card">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <h3>WhatsApp Resmi</h3>
+          <p>Chat via WhatsApp untuk bantuan cepat.</p>
+          <a href="https://wa.me/6285122222210" target="_blank" rel="noopener noreferrer" style="text-decoration:none;"><p class="contact-number">0851-2222-2210</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Seputar Fitur Bantuan -->
+    <section id="faq-section" class="faq-section">
+      <h2><span class="section-title">Pertanyaan Umum tentang Fitur Bantuan</span></h2>
+      <p class="section-description">Temukan jawaban dari pertanyaan yang sering diajukan</p>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">Di mana letak fitur bantuan di aplikasi Ajaib?</div>
+          <div class="faq-answer">Fitur bantuan biasanya dapat diakses melalui ikon profil di pojok kanan bawah, lalu pilih menu "Bantuan" atau "Pusat Bantuan". Pada beberapa versi, terdapat ikon headset di halaman utama.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Apakah live chat di aplikasi gratis?</div>
+          <div class="faq-answer">Ya, live chat di aplikasi Ajaib gratis dan tersedia 24 jam. Anda hanya memerlukan koneksi internet.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Apa saja yang bisa ditanyakan melalui fitur bantuan?</div>
+          <div class="faq-answer">Anda dapat menanyakan masalah seputar login, deposit/withdraw, kendala teknis, informasi produk investasi, hingga pengaduan.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Apakah saya harus login untuk mengakses fitur bantuan?</div>
+          <div class="faq-answer">Ya, Anda perlu login ke akun Ajaib untuk mengakses fitur bantuan, karena beberapa informasi seperti riwayat transaksi diperlukan untuk analisis masalah.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta-section" class="cta-section" role="complementary">
+      <h3>Masih Mengalami Kendala?</h3>
+      <p>Gunakan fitur bantuan di aplikasi atau hubungi Customer Service Ajaib melalui tombol di bawah.</p>
+      <div class="cta-contact-info">
+        <div class="contact-buttons">
+          <a href="tel:0851-2222-2210" class="contact-button phone-button">
+            <span class="button-icon">📞</span>
+            <span class="button-text">Call Center 0851-2222-2210</span>
+          </a>
+          <a href="https://wa.me/6285122222210" class="contact-button whatsapp-button">
+            <span class="button-icon">💬</span>
+            <span class="button-text">WhatsApp 0851-2222-2210</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Ajaib Sekuritas</h4>
+        <p>Platform investasi online resmi, berizin OJK. Nikmati fitur bantuan yang mudah diakses kapan saja.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Informasi Kontak CS</h4>
+        <ul>
+          <li>📞 Call Center: 0851-2222-2210</li>
+          <li>💬 WhatsApp: 0851-2222-2210</li>
+          <li>✉️ Email: support@ajaib.co.id</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Jam Layanan CS</h4>
+        <p>Senin - Minggu: 24 Jam Non-Stop<br>Termasuk Hari Libur Nasional</p>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 PT Ajaib Teknologi Indonesia (Ajaib Sekuritas). Hak cipta dilindungi undang-undang.</p>
+      <p>Panduan ini dapat berubah sesuai pembaruan aplikasi.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelector('.nav__button').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('#contact-section').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+        
+        // Close all other answers
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('active');
+          q.nextElementSibling.classList.remove('active');
+        });
+
+        // Toggle current answer
+        if (!isActive) {
+          question.classList.add('active');
+          answer.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
