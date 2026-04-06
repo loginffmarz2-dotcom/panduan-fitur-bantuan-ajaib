@@ -1,0 +1,27 @@
+{
+  "name": "panduan-fitur-bantuan-ajaib",
+  "version": "1.0.0",
+  "description": "Panduan lengkap menggunakan fitur bantuan di aplikasi Ajaib dengan Vercel Speed Insights",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild speed-insights.js --bundle --outfile=dist/speed-insights.js --format=iife",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loginffmarz2-dotcom/panduan-fitur-bantuan-ajaib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loginffmarz2-dotcom/panduan-fitur-bantuan-ajaib/issues"
+  },
+  "homepage": "https://github.com/loginffmarz2-dotcom/panduan-fitur-bantuan-ajaib#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
